@@ -6,6 +6,7 @@
 - VSCode
 - iTerm2
 - LastPass
+- Docker for Mac
 
 ## Command line installs
 
@@ -14,9 +15,9 @@
 - `brew install yarn`
 - Install neovim
 - Install asdf
-    - node
-    - ruby
-    - python
+  - node
+  - ruby
+  - python
 
 ## Config
 
