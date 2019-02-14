@@ -1,9 +1,19 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-source ~/.vimrc
 
+set number
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+" Change default split orientation
 set splitbelow
 set splitright
+
 
 " Terminal Commands
 nnoremap ,s <C-w>s
@@ -12,6 +22,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Map shortcut keys
+nnoremap , :
 
 " Map keys for copying to clipboard
 vnoremap ,y  "+y
