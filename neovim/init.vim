@@ -52,7 +52,7 @@ let g:EasyMotion_smartcase = 1
 
 " VIM Plug - use :PlugInstall to install plugins
 " Specify directory for plugins 
-" some plugins from Vundle etc require ":source %" before installing
+" run ":source %" and ":PlugInstall" to install new plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'easymotion/vim-easymotion'
@@ -62,5 +62,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mileszs/ack.vim'
 Plug 'HerringtonDarkholme/yats.vim',      { 'for': ['typescript', 'typescriptreact'] }
 Plug 'mhartington/nvim-typescript',       { 'do': './install.sh', 'for': ['typescript', 'typescriptreact'] }
+Plug 'prettier/vim-prettier',             { 'do': 'yarn install' }
+Plug 'tpope/vim-fugitive'                 " Get git actions
 
 call plug#end()
