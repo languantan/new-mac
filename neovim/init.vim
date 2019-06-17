@@ -1,6 +1,3 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-
 set number
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -50,7 +47,13 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 
-" VIM Plug - use :PlugInstall to install plugins
+" VIM Plug - install VIM Plug and plugins
+if empty(glob('~/.nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Specify directory for plugins 
 " run ":source %" and ":PlugInstall" to install new plugins
 call plug#begin('~/.local/share/nvim/plugged')
