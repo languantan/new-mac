@@ -14,8 +14,9 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 ###########################
 # PowerLevel9K Customization
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context vcs newline dir)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status battery time)
+export POWERLEVEL9K_CONTEXT_TEMPLATE="%m"
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context time vcs dir)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status)
 export POWERLEVEL9K_VI_INSERT_MODE_STRING=''
 export POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='teal'
 export POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='teal'
