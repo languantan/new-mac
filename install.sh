@@ -66,14 +66,14 @@ quit_script()
 
 trap quit_script SIGINT
 echo "What should we do today?"
-select choice in "brew" "helpers" "neovim" "tmux" "zsh" "Done"; do
+select choice in "brew" "helpers" "neovim" "tmux" "zsh" "i'm done"; do
     case $choice in
         brew ) install_brew; break;; 
         helpers ) install_helpers; break;;
         neovim ) install_neovim; break;;
         tmux ) install_tmux; break;;
         zsh ) install_zsh; break;;
-        Done ) echo "You are awesome!"; exit;;
+        "i'm done" ) echo "You are awesome!"; exit;;
     esac
 done
 
