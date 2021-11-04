@@ -2,11 +2,15 @@
 
 ## Applications
 
-- Xcode
-- VSCode
+- Xcode 
+- Visual Studio Code
 - iTerm2
-- LastPass
+- Bitwarden
 - Docker for Mac
+- Whatsapp
+- Telegram
+- Slack
+- Notion
 
 ## How-to
 `sh install.sh` - will install the stuff below
