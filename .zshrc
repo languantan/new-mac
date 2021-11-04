@@ -1,32 +1,28 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ANDROID_HOME="/Users/ryantan/android-sdk/"
-export PATH="$ANDROID_HOME/tools/:$PATH"
-export PATH="$ANDROID_HOME/tools/bin/:$PATH"
-export PATH="$ANDROID_HOME/tools/proguard/bin/:$PATH"
-export PATH="$ANDROID_HOME/platform-tools/:$PATH"
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-export ANT_HOME="/Users/ryantan/Library/Developer/apache-ant-1.9.4/"
 export PATH="$PATH:$ANT_HOME/bin"
-export PATH="~/Developer/:$PATH"
-export PATH=$PATH:"/Users/ryantan/Developer/gatling-sdk/bin/"
-export PATH="$PATH:/usr/local/mysql/bin/"
-export GOPATH=$HOME/Developer/golang
-export PATH=$PATH:"/Users/ryantan/.asdf/installs/python/3.6.2/bin/"
+export PATH="$HOME/Dev/:$PATH"
+export PATH="/opt/homebrew/bin/brew:$PATH"
+export GOPATH="$HOME/Dev/golang"
 export TERM="xterm-256color"
 export EDITOR="nvim"
 
-# WOGAA Exports
-# source /Users/ryantan/wogaa_exports
-source /Users/ryantan/.zshrc-kops
-
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ryantan/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="pure"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+###########################
+# PowerLevel9K Customization
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context vcs newline dir)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status battery time)
+export POWERLEVEL9K_VI_INSERT_MODE_STRING=''
+export POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='teal'
+export POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='teal'
+export POWERLEVEL9K_VI_COMMAND_MODE_STRING='VI_MODE'
+export POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='red'
+export POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='yellow'
+###########################
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -74,18 +70,6 @@ plugins=(git git-flow kubectl vi-mode z)
 
 source $ZSH/oh-my-zsh.sh
 
-###########################
-# PowerLevel9K Customization
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context vcs newline dir)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status battery time)
-export POWERLEVEL9K_VI_INSERT_MODE_STRING=''
-export POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='teal'
-export POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='teal'
-export POWERLEVEL9K_VI_COMMAND_MODE_STRING='VI_MODE'
-export POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='red'
-export POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='yellow'
-###########################
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -93,29 +77,8 @@ export POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='yellow'
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-source /Users/ryantan/.aliases
-
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -124,3 +87,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
+
+eval $(/opt/homebrew/bin/brew shellenv)

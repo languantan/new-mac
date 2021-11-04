@@ -48,8 +48,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:EasyMotion_smartcase = 1
 
 " VIM Plug - install VIM Plug and plugins
-if empty(glob('~/.nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
