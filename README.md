@@ -7,6 +7,7 @@
 - iTerm2
 - Bitwarden
 - Docker for Mac
+- Dropbox
 - Whatsapp
 - Telegram
 - Slack
