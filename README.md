@@ -19,17 +19,11 @@
 
 ## Command line installs
 
-- Brew - MacOS package manager
-- Shiftit - Window organizer
-- Yarn - node package manager
+- brew - MacOS package manager
+- helpers - shiftit, karabiner, yarn, neovim, tmux, wget, asdf
 - neovim - VIM editor with advanced features
-- asdf - Version Manager for languages + frameworks, replaces nvm, rvm etc
-  - node
-  - ruby
-  - python
+- tmux - terminal window manager
+- zsh - colorschemes and zsh aliases
 
-## Config
-
-- Change shiftit shortcuts
-- `~/.config/init.vim`
-- `~/.aliases`
+## Other stuff
+- add pam_tid.so to /etc/pam.d/sudo to use touchid for sudo 
