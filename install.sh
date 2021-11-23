@@ -54,6 +54,15 @@ install_tmux()
     echo "DONE."
 }
 
+configure_zprofile()
+{
+    read -n 1 -r -s -p $'Need sudo to update /etc/zprofile to ensure new tmux sessions does not mess up PATH...PRESS ENTER TO TYPE PASSWORD\n'
+    echo -n "Copying zprofile...."
+    sudo mv /etc/zprofile /etc/zprofile_bak
+    sudo cp zprofile /etc/zprofile
+    echo "DONE."
+}
+
 
 
 quit_script()
@@ -66,13 +75,14 @@ quit_script()
 
 trap quit_script SIGINT
 echo "What should we do today?"
-select choice in "brew" "helpers" "neovim" "tmux" "zsh" "i'm done"; do
+select choice in "brew" "helpers" "neovim" "tmux" "zsh" "zprofile" "i'm done"; do
     case $choice in
         brew ) install_brew; break;; 
         helpers ) install_helpers; break;;
         neovim ) install_neovim; break;;
         tmux ) install_tmux; break;;
         zsh ) install_zsh; break;;
+        zprofile ) configure_zprofile; break;;
         "i'm done" ) echo "You are awesome!"; exit;;
     esac
 done
