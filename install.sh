@@ -8,7 +8,6 @@ install_brew()
 
 install_helpers()
 {
-    brew install --cask shiftit
     brew install --cask karabiner-elements
     cp karabiner/karabiner.json ~/.config/karabiner/
     brew install yarn
@@ -20,6 +19,14 @@ install_helpers()
     echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
     echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
 }
+
+install_hammerspoon()
+{
+    brew install --cask hammerspoon
+    cp -r hammerspoon $HOME/.hammerspoon
+    echo "Installed Hammerspoon."
+}
+
 
 install_neovim()
 {
@@ -75,10 +82,11 @@ quit_script()
 
 trap quit_script SIGINT
 echo "What should we do today?"
-select choice in "brew" "helpers" "neovim" "tmux" "zsh" "zprofile" "i'm done"; do
-    case $choice in
+select choice in "brew" "helpers" "window-mgmt" "neovim" "tmux" "zsh" "zprofile" "i'm done"; do
+    case $choice in 
         brew ) install_brew; break;; 
         helpers ) install_helpers; break;;
+        window-mgmt ) install_hammerspoon; break;;
         neovim ) install_neovim; break;;
         tmux ) install_tmux; break;;
         zsh ) install_zsh; break;;

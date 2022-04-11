@@ -39,6 +39,9 @@ alias dcsa='docker-compose start'
 alias dce='docker-compose exec -it'
 alias dce='docker-compose exec'
 alias dcrm='docker-compose rm -f'
+
+alias hammer='open /Applications/Hammerspoon.app'
+
 function getssh() {
     cat ~/.ssh/config | grep -A 5 $1
 }

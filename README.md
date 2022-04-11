@@ -20,7 +20,8 @@
 ## Command line installs
 
 - brew - MacOS package manager
-- helpers - shiftit, karabiner, yarn, neovim, tmux, wget, asdf
+- helpers - karabiner, yarn, neovim, tmux, wget, asdf
+- window-mgmt - Hammerspoon with ShiftIt spoon
 - neovim - VIM editor with advanced features
 - tmux - terminal window manager
 - zsh - colorschemes and zsh aliases
