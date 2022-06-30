@@ -11,11 +11,10 @@ alias reloadvpn='sudo kextunload -b "net.sf.tuntaposx.tun";sudo kextunload -b "n
 alias loadvpn='sudo kextload -b "net.sf.tuntaposx.tun";sudo kextload -b "net.sf.tuntaposx.tap"'
 alias rm="rm -i"
 
-alias gmdev='git checkout development && git pull --rebase && git checkout - && git merge development'
 function gpr() {
     open $(git push 2>&1 | awk ' /  http/ {print $2}')
 }
-alias gtp='yarn test && gpr' 
+alias gbdd="git push origin --delete"
 
 alias k='kubectl'
 alias dls='docker ps -a'

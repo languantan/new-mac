@@ -50,6 +50,10 @@ install_zsh()
     wget -O 10-powerline-symbols.conf https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
     read -n 1 -r -s -p $'Opening fonts to install...Press ENTER.\n'
     open PowerlineSymbols.otf
+    echo -n "Adding aliases..."
+    cat aliases.zsh > ~/.oh-my-zsh/custom/aliases.zsh
+    source ~/.oh-my-zsh/custom/aliases.zsh
+    echo "DONE."
     echo "Awesome."
 }
 
@@ -70,6 +74,14 @@ configure_zprofile()
     echo "DONE."
 }
 
+#### Aliases
+refresh_aliases()
+{
+    echo -n "Adding aliases..."
+    cat aliases.zsh > ~/.oh-my-zsh/custom/aliases.zsh
+    echo "DONE."
+}
+
 
 
 quit_script()
@@ -82,7 +94,7 @@ quit_script()
 
 trap quit_script SIGINT
 echo "What should we do today?"
-select choice in "brew" "helpers" "window-mgmt" "neovim" "tmux" "zsh" "zprofile" "i'm done"; do
+select choice in "brew" "helpers" "window-mgmt" "neovim" "tmux" "zsh" "zprofile" "aliases" "i'm done"; do
     case $choice in 
         brew ) install_brew; break;; 
         helpers ) install_helpers; break;;
@@ -91,11 +103,7 @@ select choice in "brew" "helpers" "window-mgmt" "neovim" "tmux" "zsh" "zprofile"
         tmux ) install_tmux; break;;
         zsh ) install_zsh; break;;
         zprofile ) configure_zprofile; break;;
+        aliases ) refresh_aliases; break;;
         "i'm done" ) echo "You are awesome!"; exit;;
     esac
 done
-
-#### Aliases
-echo -n "Adding aliases..."
-cat .aliases > ~/.oh-my-zsh/custom/aliases.zsh
-echo "DONE."
