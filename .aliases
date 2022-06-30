@@ -15,7 +15,7 @@ alias gmdev='git checkout development && git pull --rebase && git checkout - && 
 function gpr() {
     open $(git push 2>&1 | awk ' /  http/ {print $2}')
 }
-alias gtp='yarn test && gpr' 
+alias gbdd="git push origin --delete" #gbdd <branch-name>
 
 alias k='kubectl'
 alias dls='docker ps -a'
