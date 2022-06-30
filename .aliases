@@ -1,11 +1,11 @@
 #!/bin/bash
 alias vim='nvim'
 alias glrun="go run main.go"
-alias rc-edit="vim /Users/ryantan/.zshrc"
+alias rc-edit="vim $HOME/.zshrc"
 alias nvim-init="nvim $HOME/.config/nvim/init.vim"
 alias xcode='open -a Xcode'
 alias 88="exit"
-alias 881="source /Users/ryantan/.zshrc"
+alias 881="source $HOME/.zshrc"
 
 alias reloadvpn='sudo kextunload -b "net.sf.tuntaposx.tun";sudo kextunload -b "net.sf.tuntaposx.tap"'
 alias loadvpn='sudo kextload -b "net.sf.tuntaposx.tun";sudo kextload -b "net.sf.tuntaposx.tap"'
